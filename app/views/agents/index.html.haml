@@ -2,14 +2,11 @@
   = render :partial => "layouts/agent_list_header"
 
 .agents-list
-  %ul
+  %ul.agents
     - @agents.each do |agent|
-      %li
-        .image
+      %li.agent.clearfix
+        .agent-photo
           = link_to image_tag("agents/agent_#{agent.id}.png"), agent_events_path(agent)
         .description
-          %ul
-            %li.name
-              = link_to agent.name, agent_events_path(agent)
-            %li.mood
-              = @agents_map[agent.name]
+          = link_to agent.name, agent_events_path(agent)
+          = @agents_map[agent.name]

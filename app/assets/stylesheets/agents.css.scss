@@ -28,19 +28,29 @@ div.autocomplete-suggestion {
 
 .agents {
   .agent {
+    box-sizing: border-box;
     height: 80px;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid white;
     color: #333;
     font-size: 25px;
+    line-height: 80px;
     &:first-child {
       border-top: none;
     }
+    .agent-photo {
+      float: left;
+      height: 60px;
+      padding: 10px;
+      img {
+        width: 50px;
+        height: 60px;
+      }
+    }
+    div {
+      float: left;
+    }
   }
-}
-
-.agents-list {
-  padding-left: 20px;
 }
 
 .image {
