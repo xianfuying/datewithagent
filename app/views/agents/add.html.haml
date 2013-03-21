@@ -1,0 +1,6 @@
+%h1 Add an Agent
+%form{:action => "/agents/create"}
+  %select{:name=>"id"}
+    - @available_agents.each do |agent|
+      %option{:value=> "#{agent.id}"} #{agent.name}
+  %input{:type=>"submit", :value=>"Add"}

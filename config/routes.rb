@@ -8,6 +8,7 @@ Datewithagent::Application.routes.draw do
   match '/agents', to: 'agents#index'
   match '/agents/add', to: 'agents#add'
   match '/agents/create', to: 'agents#create'
+  match '/agents/:id/events', to: 'agents#events'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
