@@ -26,3 +26,28 @@ div.autocomplete-suggestion {
   font-weight: normal;
   color: #3399FF;
 }
+
+.header {
+  text-align: center;
+  position: relative;
+  .account {
+    font-size: 25px;
+  }
+  .nav {
+    position: absolute;
+    right: 10px;
+    top: 0;
+    color: #55aa77;
+    font-size: 30px;
+    a {
+      display: inline-block;
+      padding: 3px 5px 2px 5px;
+      background-color: #efefef;
+      border-radius: 3px;
+      color: #55aa77;
+      &:visited {
+        color: #55aa77;
+      }
+    }
+  }
+}
