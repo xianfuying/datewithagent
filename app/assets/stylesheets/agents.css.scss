@@ -30,20 +30,28 @@ div.autocomplete-suggestion {
 .header {
   text-align: center;
   position: relative;
-  .account {
+  .title {
     font-size: 25px;
   }
   .nav {
     position: absolute;
     color: #55aa77;
     font-size: 30px;
+    text-align: center;
+    box-sizing: border-box;
     &.add {
       right: 10px;
+      top: 0;
+    }
+
+    &.back {
+      left: 10px;
       top: 0;
     }
     a {
       display: inline-block;
       padding: 3px 5px 2px 5px;
+      width: 25px;
       background-color: #efefef;
       border-radius: 3px;
       color: #55aa77;

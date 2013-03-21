@@ -1,7 +1,6 @@
 =content_for :header do
-  = render :partial => "layouts/header"
+  = render :partial => "layouts/add_agent_header"
 
-%h1 Add an Agent
 %form{:action => "/agents/add"}
   %input#agent{:name=>"name", :type=>"text"}
   %input{:type=>"submit", :value=>"Add"}
