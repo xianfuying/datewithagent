@@ -1,9 +1,5 @@
 =content_for :header do
-  = render :partial => "layouts/header"
+  = render :partial => "layouts/new_event_header"
 
 .form
-  %h2 New event
-
   = render 'form'
-
-  = link_to 'Back', agent_events_path, class: "shared-links"
