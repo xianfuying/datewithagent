@@ -1,25 +1,10 @@
 %h1 Listing events
 
-%table
-  %tr
-    %th Type
-    %th Descriptiont
-    %th Mode
-    %th Happen time
-    %th
-    %th
-    %th
+= table_for @events do
+  - columns :event_type, :description, :mode, :happen_time
+  - column :title => "Actions" do |recruit|
+    = link_to "Show", recruit
+    = link_to "Edit", edit_event_path(recruit)
+    = link_to "Delete", recruit, :method => :delete, data: {confirm: 'Are you sure?'}
 
-  - @events.each do |event|
-    %tr
-      %td= event.event_type
-      %td= event.description
-      %td= event.mode
-      %td= event.happen_time
-      %td= link_to 'Show', event
-      %td= link_to 'Edit', edit_event_path(event)
-      %td= link_to 'Destroy', event, :method => :delete, :data => { :confirm => 'Are you sure?' }
-
-%br
-
-= link_to 'New Event', new_event_path
+= link_to 'New event', new_event_path
