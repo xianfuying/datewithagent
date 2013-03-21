@@ -2,6 +2,6 @@
 
 = render 'form'
 
-= link_to 'Show', @event
+= link_to 'Show', agent_event_path(@agent, @event)
 \|
-= link_to 'Back', events_path
+= link_to 'Back', agent_events_path

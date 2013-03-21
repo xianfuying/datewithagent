@@ -1,6 +1,6 @@
 %p
   = link_to "Back", '/'
-  = link_to "Add Agent", '/agents/add'
+  = link_to "Add Agent", '/agents/new'
 
 %table
   %thead
@@ -12,6 +12,6 @@
   - @agents.each do |agent|
     %tr
       %td
-        = link_to agent.name, "/agents/#{agent.id}/events"
+        = link_to agent.name, agent_events_path(agent)
       %td
         = @agents_map[agent.name]

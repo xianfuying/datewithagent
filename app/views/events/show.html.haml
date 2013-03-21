@@ -13,6 +13,6 @@
   %b Happen time:
   = @event.happen_time
 
-= link_to 'Edit', edit_event_path(@event)
+= link_to 'Edit', edit_agent_event_path(@agent, @event)
 \|
-= link_to 'Back', events_path
+= link_to 'Back', agent_events_path
