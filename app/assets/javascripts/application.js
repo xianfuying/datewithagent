@@ -13,3 +13,5 @@
 //= require jquery
 //= require jquery_ujs
 //= require_tree .
+//= require jquery.autocomplete
+//= require agents_auto_suggestion

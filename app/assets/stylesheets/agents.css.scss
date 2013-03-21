@@ -1,3 +1,28 @@
 // Place all the styles related to the Agents controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
+
+.autocomplete-suggestions {
+  background-color: #DDDDDD;
+  position: absolute;
+  top: 0px;
+  left: 0px;
+  margin: 6px 0 0 6px; /* IE6 fix: */
+  _background: none;
+  _margin: 1px 0 0 0;
+}
+
+.autocomplete-selected {
+  background: #F0F0F0;
+}
+
+div.autocomplete-suggestion {
+  padding: 2px 5px;
+  white-space: nowrap;
+  overflow: hidden;
+}
+
+.autocomplete-suggestion strong {
+  font-weight: normal;
+  color: #3399FF;
+}

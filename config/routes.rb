@@ -4,8 +4,9 @@ Datewithagent::Application.routes.draw do
     resources :events
   end
 
-  match '/agents/add' => 'agents#add'
   match '/agents/new' => 'agents#new'
+  match '/agents/add' => 'agents#add'
+  match '/agents/find' => 'agents#find'
 
   devise_for :account_managers
 

@@ -2,11 +2,24 @@ class AgentsController < ApplicationController
   before_filter :authenticate_account_manager!
 
   def new
-    @available_agents = Agent.where("account_manager_id IS NULL").order("name ASC")
+  end
+
+  def find
+    @available_agents = Agent.where("name like '%#{params[:query]}%' and account_manager_id IS NULL")
+
+    result = {
+        query: params[:query],
+        suggestions: @available_agents.map { |agent| agent.name },
+        data: @available_agents.map { |agent| agent.name }
+    }
+
+    respond_to do |format|
+      format.json { render json: result }
+    end
   end
 
   def add
-    @agent = Agent.find(params[:id])
+    @agent = Agent.find_by_name(params[:name])
     @agent.update_attribute(:account_manager_id, current_account_manager.id)
     redirect_to "/agents"
   end
