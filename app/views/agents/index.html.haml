@@ -1,0 +1,17 @@
+%p
+  = link_to "Back", '/'
+  = link_to "Add Agent", '/agents/add'
+
+%table
+  %thead
+    %tr
+      %th
+        Agent Name
+      %th
+        Mood
+  - @agents.each do |agent|
+    %tr
+      %td
+        = link_to agent.name, "/agents/#{agent.id}/events"
+      %td
+        = "happy"
