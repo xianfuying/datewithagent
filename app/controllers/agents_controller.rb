@@ -2,15 +2,17 @@ class AgentsController < ApplicationController
   before_filter :authenticate_account_manager!
 
   def add
+    @available_agents = Agent.where("account_manager_id IS NULL")
+  end
 
+  def create
+    @agent = Agent.find(params[:Agent])
+    @agent.update_attribute(:account_manager_id, current_account_manager.id)
+    redirect_to "/agents"
   end
 
   def index
-    if account_manager_signed_in?
-      @agents = Agent.where(:account_manager_id => current_account_manager.id)
-    else
-      redirect_to '/account_managers/sign_in'
-    end
+    @agents = Agent.where(:account_manager_id => current_account_manager.id)
   end
 
 end

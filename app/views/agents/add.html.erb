@@ -1,0 +1,10 @@
+<h1>Add an Agent</h1>
+<form action="/agents/create">
+  <select name="Agent">
+    <option value="----">--Select--</option>
+    <% @available_agents.each do |agent| %>
+        <option value="<%= agent.id %>"><%= agent.name %></option>
+    <% end %>
+  </select>
+  <input type="submit" value="Add"/>
+</form>
