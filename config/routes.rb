@@ -1,7 +1,7 @@
 Datewithagent::Application.routes.draw do
   devise_for :account_managers
 
-  root :to => redirect("/account_managers/sign_in")
+  root :to => redirect("/account_managers/sign_up")
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
