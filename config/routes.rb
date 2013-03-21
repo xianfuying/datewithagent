@@ -5,7 +5,11 @@ Datewithagent::Application.routes.draw do
 
   devise_for :account_managers
 
-  root :to => "home#index"
+  root :to => "agents#index"
+
+  match '/agents', to: 'agents#index'
+  match '/agents/:id/add', to: 'agents#add'
+  match '/agents/:id/remove', to: 'agents#remove'
 
   # The priority is based upon order of creation:
   # first created -> highest priority.
