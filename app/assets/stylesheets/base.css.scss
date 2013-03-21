@@ -19,13 +19,14 @@ body, html {
   background-color: #efefef;
   min-height: 500px;
   .content {
-    padding: 20px;
+    padding-top: 20px;
     margin: 0 auto;
-    width: 200px;
   }
 }
 
 .form {
+  width: 220px;
+  margin: 0 auto;
   font-size: 20px;
   line-height: 30px;
   h2 {
@@ -38,7 +39,7 @@ body, html {
   }
 }
 
-input[type="button"] {
+input[type="submit"] {
   width: 200px;
   height: 50px;
   background-color: #55aa77;
