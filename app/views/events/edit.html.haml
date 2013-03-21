@@ -1,8 +1,9 @@
 .form
-  %h1 Editing event
+  %h2 Editing event
 
   = render 'form'
 
-  = link_to 'Show', agent_event_path(@agent, @event)
-  \|
-  = link_to 'Back', agent_events_path
+  .shared-links
+    = link_to 'Show', agent_event_path(@agent, @event)
+    \|
+    = link_to 'Back', agent_events_path
