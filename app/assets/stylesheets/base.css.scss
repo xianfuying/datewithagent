@@ -1,6 +1,7 @@
 body, html {
   padding: 0;
   margin: 0;
+  font-size: 18px;
 }
 
 .header {
@@ -10,7 +11,7 @@ body, html {
   line-height: 60px;
   .logo {
     margin-left: 10px;
-    font-size: 35px;
+    font-size: 30px;
     font-weight: bolder;
   }
 }
@@ -25,26 +26,34 @@ body, html {
 }
 
 .form {
-  width: 220px;
+  width: 240px;
   margin: 0 auto;
-  font-size: 20px;
+  font-size: 18px;
   line-height: 30px;
   h2 {
     font-size: 24px
   }
   input {
     height: 40px;
-    width: 200px;
-    font-size: 26px;
+    width: 220px;
+    font-size: 16px;
+  }
+  label {
+    font-size: 14px;
+  }
+  .shared-links {
+    font-size: 12px;
   }
 }
 
 input[type="submit"] {
-  width: 200px;
+  width: 220px;
   height: 50px;
   background-color: #55aa77;
   color: white;
   border: none;
+  border-radius: 3px;
+  margin-top: 20px;
 }
 
 

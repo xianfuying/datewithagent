@@ -1,7 +1,8 @@
-%h1 Editing event
+.form
+  %h1 Editing event
 
-= render 'form'
+  = render 'form'
 
-= link_to 'Show', agent_event_path(@agent, @event)
-\|
-= link_to 'Back', agent_events_path
+  = link_to 'Show', agent_event_path(@agent, @event)
+  \|
+  = link_to 'Back', agent_events_path
