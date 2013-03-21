@@ -1,4 +1,6 @@
 Datewithagent::Application.routes.draw do
+  resources :events
+
   get "home/index"
 
   devise_for :account_managers

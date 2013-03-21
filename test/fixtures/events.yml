@@ -1,0 +1,13 @@
+# Read about fixtures at http://api.rubyonrails.org/classes/ActiveRecord/Fixtures.html
+
+one:
+  type: 
+  descriptiont: MyText
+  mode: 1
+  happen_time: 2013-03-21
+
+two:
+  type: 
+  descriptiont: MyText
+  mode: 1
+  happen_time: 2013-03-21
