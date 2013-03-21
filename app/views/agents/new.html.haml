@@ -1,3 +1,6 @@
+=content_for :header do
+  = render :partial => "layouts/header"
+
 %h1 Add an Agent
 - if @available_agents.size > 0
   %form{:action => "/agents/add"}
