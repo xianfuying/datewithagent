@@ -1,6 +1,8 @@
 =content_for :header do
   = render :partial => "layouts/add_agent_header"
 
-%form{:action => "/agents/add"}
-  %input#agent{:name=>"name", :type=>"text"}
-  %input{:type=>"submit", :value=>"Add"}
+.form
+  %form{:action => "/agents/add"}
+    %fieldset
+      %input#agent{name: "name", type: "text", placeholder: "input agent name"}
+    %input{:type=>"submit", :value=>"Add"}
