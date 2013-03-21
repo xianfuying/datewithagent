@@ -36,15 +36,14 @@ div.autocomplete-suggestion {
   .nav {
     position: absolute;
     color: #55aa77;
-    font-size: 30px;
+    font-size: 26px;
     text-align: center;
     box-sizing: border-box;
-    &.add {
+    &.right {
       right: 10px;
       top: 0;
     }
-
-    &.back {
+    &.left {
       left: 10px;
       top: 0;
     }
