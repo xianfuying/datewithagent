@@ -1,7 +1,6 @@
 // Place all the styles related to the Agents controller here.
 // They will automatically be included in application.css.
 // You can use Sass (SCSS) here: http://sass-lang.com/
-
 .autocomplete-suggestions {
   background-color: #DDDDDD;
   position: absolute;
@@ -36,6 +35,43 @@ div.autocomplete-suggestion {
     font-size: 25px;
     &:first-child {
       border-top: none;
+    }
+  }
+}
+
+.agents-list {
+  padding-left: 20px;
+}
+
+.image {
+  display: inline-block;
+  height: 80px;
+  width: 60px;
+  margin: 10px;
+  margin-left: 0px;
+}
+
+.description {
+  display: inline-block;
+  padding-left: 10px;
+}
+
+.list-name {
+  margin-bottom: 30px;
+}
+
+ul {
+  list-style: none;
+  padding-left: 20px;
+}
+
+li {
+  ul {
+    .name {
+      margin-bottom: 30px;
+    }
+    .mood {
+      margin-bottom: 10px;
     }
   }
 }
