@@ -5,6 +5,10 @@ body, html, fieldset {
   border: none;
 }
 
+fieldset {
+  margin-bottom: 10px;
+}
+
 .header {
   height: 60px;
   background-color: #55aa77;
@@ -49,6 +53,16 @@ body, html, fieldset {
   textarea {
     height: 60px;
   }
+  .remember-me {
+    line-height: 55px;
+    label {
+      display: inline-block;
+      font-size: 16px;
+    }
+  }
+  #account_manager_remember_me {
+    float: left;
+  }
 }
 
 input[type="submit"] {
@@ -58,7 +72,6 @@ input[type="submit"] {
   color: white;
   border: none;
   border-radius: 3px;
-  margin-top: 20px;
   -webkit-appearance: none;
 }
 
