@@ -123,8 +123,8 @@ PLATFORMS
 
 DEPENDENCIES
   coffee-rails (~> 3.2.1)
-  haml-rails
   devise
+  haml-rails
   jquery-rails
   jquery_mobile_rails
   mysql2
