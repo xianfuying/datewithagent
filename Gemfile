@@ -42,3 +42,4 @@ gem 'table_for_collection'
 # gem 'debugger'
 
 gem "devise"
+gem "enumerated_attribute"
