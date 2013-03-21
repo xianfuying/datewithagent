@@ -1,16 +1,9 @@
 =content_for :header do
   = render :partial => "layouts/agent_list_header"
 
-%table
-  %thead
-    %tr
-      %th
-        Agent Name
-      %th
-        Mood
+%ul.agents
   - @agents.each do |agent|
-    %tr
-      %td
-        = link_to agent.name, agent_events_path(agent)
-      %td
-        = @agents_map[agent.name]
+    %li.agent
+      = link_to agent.name, agent_events_path(agent), class: "hide agent-link"
+      .name= agent.name
+      .mood= @agents_map[agent.name]

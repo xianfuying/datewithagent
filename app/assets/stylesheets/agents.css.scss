@@ -26,3 +26,16 @@ div.autocomplete-suggestion {
   font-weight: normal;
   color: #3399FF;
 }
+
+.agents {
+  .agent {
+    height: 80px;
+    border-bottom: 1px solid #ccc;
+    border-top: 1px solid white;
+    color: #333;
+    font-size: 25px;
+    &:first-child {
+      border-top: none;
+    }
+  }
+}

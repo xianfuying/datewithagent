@@ -1,14 +1,3 @@
-body, html, fieldset {
-  padding: 0;
-  margin: 0;
-  font-size: 18px;
-  border: none;
-}
-
-fieldset {
-  margin-bottom: 10px;
-}
-
 .header {
   height: 50px;
   background-color: #55aa77;
@@ -130,4 +119,8 @@ input[type="checkbox"]{
 .mode img {
   width: 50px;
   height: 50px;
+}
+
+.hide {
+  display: none;
 }

@@ -6,6 +6,23 @@ body {
   line-height: 18px;
 }
 
+body, html, fieldset {
+  padding: 0;
+  margin: 0;
+  font-size: 18px;
+  border: none;
+}
+
+fieldset {
+  margin-bottom: 10px;
+}
+
+ul, li {
+  padding: 0;
+  margin: 0;
+  list-style: none;
+}
+
 p, ol, ul, td {
   font-family: verdana, arial, helvetica, sans-serif;
   font-size: 13px;
