@@ -7,4 +7,4 @@
     = link_to "Edit", edit_event_path(recruit)
     = link_to "Delete", recruit, :method => :delete, data: {confirm: 'Are you sure?'}
 
-= link_to 'New event', new_event_path
+= link_to 'New event', "/events/new?agent_id=#{params[:id]}"
