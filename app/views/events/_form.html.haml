@@ -1,22 +1,14 @@
-= form_for @event do |f|
-  - if @event.errors.any?
-    #error_explanation
-      %h2= "#{pluralize(@event.errors.count, "error")} prohibited this event from being saved:"
-      %ul
-        - @event.errors.full_messages.each do |msg|
-          %li= msg
+- if @event.errors.any?
+  #error_explanation
+    %h2= "#{pluralize(@event.errors.count, "error")} prohibited this event from being saved:"
+    %ul
+      - @event.errors.full_messages.each do |msg|
+        %li= msg
 
-  .field
-    = f.label :event_type
-    = f.text_field :event_type
-  .field
-    = f.label :description
-    = f.text_area :description
-  .field
-    = f.label :mode
-    = f.number_field :mode
-  .field
-    = f.label :happen_time
-    = f.date_select :happen_time
-  .actions
-    = f.submit 'Save'
+= simple_form_for @event do |f|
+  %fieldset
+    = f.input :event_type
+    = f.input :description
+    = f.input :mode
+    = f.input :happen_time
+  = f.submit
