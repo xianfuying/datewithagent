@@ -27,13 +27,14 @@ div.autocomplete-suggestion {
 }
 
 .agents {
+  border-bottom: 1px solid white;
   .agent {
     box-sizing: border-box;
     height: 80px;
     border-bottom: 1px solid #ccc;
     border-top: 1px solid white;
     color: #333;
-    font-size: 25px;
+    font-size: 18px;
     line-height: 80px;
     &:first-child {
       border-top: none;
