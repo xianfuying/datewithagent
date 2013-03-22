@@ -41,12 +41,11 @@
 .event-detail {
   margin: 0 20px 0 20px;
   .event-type {
-    font-size: 25px;
-  }
-  .time {
+    font-size: 30px;
     display: inline-block;
   }
   .mood {
+    float: right;
     display: inline-block;
   }
 }

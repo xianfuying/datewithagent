@@ -5,11 +5,10 @@
   %p#notice= notice
   %p.event-type
     = @event.event_type
-  .time
-    %p
-      = @event.happen_time
   .mood
     = image_tag("#{@event.mode}.png")
+  %p
+    = @event.happen_time
   %p
     = @event.description
   .delete
