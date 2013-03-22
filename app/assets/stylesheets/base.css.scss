@@ -77,6 +77,10 @@
   textarea {
     height: 60px;
   }
+  select {
+    height: 50px;
+    background-color: white;
+  }
   .remember-me {
     line-height: 55px;
     label {
@@ -103,7 +107,8 @@ input[type="email"],
 input[type="password"],
 input[type="text"],
 input[type="number"],
-textarea  {
+textarea,
+select  {
   box-sizing: border-box;
   border: none;
   font-size: 18px;
