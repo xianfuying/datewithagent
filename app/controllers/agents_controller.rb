@@ -5,7 +5,7 @@ class AgentsController < ApplicationController
   end
 
   def find
-    @available_agents = Agent.where("name like '%#{params[:query]}%' and account_manager_id IS NULL")
+    @available_agents = Agent.where("lower(name) like '%#{params[:query].downcase}%' and account_manager_id IS NULL")
 
     result = {
         query: params[:query],
