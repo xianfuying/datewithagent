@@ -10,7 +10,7 @@
     = f.label :event_type
     = f.enum_select :event_type
     = f.input :description, as: 'text', rows: 2, placeholder: "record more detail..."
-    = f.label :mode
+    = f.label :mood
     - mode = @event.mode
     #mode= hidden_field_tag "event[mode]", @event.mode
     %ul.modes.clearfix
