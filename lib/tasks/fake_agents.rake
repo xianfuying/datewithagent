@@ -1,6 +1,8 @@
 namespace :db do
-  desc "Create fake agents"
-  task fake_agents: :environment do
+  desc "Create fake data"
+  task fake_data: :environment do
+    AccountManager.create!(email: "fake@user.com", password: "11111111", password_confirmation: "11111111")
+
     agent = Agent.create!(name: "Joel Robotham")
     Event.create!(description: "Date With Agents", happen_time: Time.now, mode: 5, event_type: "Meeting", agent_id: agent.id)
 
