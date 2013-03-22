@@ -11,7 +11,8 @@
     = f.enum_select :event_type
     = f.input :description, as: 'text', rows: 2
     = f.input :mode
-    = f.input :happen_time, :as => 'date'
+    = f.label :happen_time
+    %input{name: "event[happen_time]", type: "date"}
     = hidden_field_tag "event[agent_id]", @agent.id
   = f.submit
 
