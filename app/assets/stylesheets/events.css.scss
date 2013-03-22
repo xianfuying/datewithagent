@@ -39,13 +39,19 @@
 }
 
 .event-detail {
-  margin: 0 20px 0 20px;
-  .event-type {
-    font-size: 30px;
+  div {
+    height: 50px;
+    text-overflow: none;
+    word-wrap: break-word ;
     display: inline-block;
+  }
+  margin: 0px 20px 0 20px;
+  .event-type {
+    font-size: 20px;
+    font-weight: bolder;
+    margin-top: 15px;
   }
   .mood {
     float: right;
-    display: inline-block;
   }
 }

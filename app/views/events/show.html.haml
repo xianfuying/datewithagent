@@ -3,7 +3,7 @@
 
 .event-detail
   %p#notice= notice
-  %p.event-type
+  .event-type
     = @event.event_type
   .mood
     = image_tag("#{@event.mode}.png")
