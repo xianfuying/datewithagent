@@ -7,8 +7,7 @@
       %li.agent.clearfix
         .agent-photo
           = link_to image_tag("agents/agent_#{agent.id}.png"), agent_events_path(agent)
-        .details
-          .description
-            = link_to agent.name, agent_events_path(agent)
-          .mood
-            = image_tag("#{@agents_map[agent.name]}.png")
+        .description
+          = link_to agent.name, agent_events_path(agent)
+        .mood
+          = image_tag("#{@agents_map[agent.name]}.png")

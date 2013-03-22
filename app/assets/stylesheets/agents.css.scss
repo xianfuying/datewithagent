@@ -59,37 +59,16 @@ div.autocomplete-suggestion {
         border-radius: 5px;
       }
     }
+    .mood {
+      float: right;
+      height: 50px;
+      line-height: 120px;
+      margin-right: 10px;
+    }
     div {
       float: left;
     }
   }
-}
-
-.image {
-  display: inline-block;
-  height: 80px;
-  width: 60px;
-  margin: 10px;
-  margin-left: 0px;
-}
-
-.details {
-  display: inline-block;
-  position: absolute;
-}
-
-.description {
-  position: absolute;
-  display: inline-block;
-  height: 80px;
-  width: 200px;
-  padding-left: 10px;
-}
-
-.mood {
-  display: inline-block;
-  margin-left: 220px;
-  margin-top: 20px;
 }
 
 .mood img {
