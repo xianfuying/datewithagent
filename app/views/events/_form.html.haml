@@ -11,11 +11,16 @@
     = f.enum_select :event_type
     = f.input :description, as: 'text', rows: 2
     = f.label :mode
+    - mode = @event.mode
     #mode= hidden_field_tag "event[mode]"
     %ul.modes.clearfix
       - (1..5).each do |index|
-        %li.mode{data: "#{index}" }
-          = image_tag("#{index}.png")
+        - if index == mode
+          %li.mode{data: "#{index}", class: "selected" }
+            = image_tag("#{index}.png")
+        - else
+          %li.mode{data: "#{index}"}
+            = image_tag("#{index}.png")
     = f.label :happen_time
     %input{name: "event[happen_time]", type: "date", value: @event.happen_time}
     = hidden_field_tag "event[agent_id]", @agent.id
