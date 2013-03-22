@@ -9,4 +9,4 @@ $ ->
   $(".mode").click (event) ->
     $(".mode").removeClass("selected")
     $(this).addClass("selected")
-    $("#mode input").val($(this).data())
+    $("#mode input").val($(this).attr("data"))

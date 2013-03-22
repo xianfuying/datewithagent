@@ -14,7 +14,7 @@
     #mode= hidden_field_tag "event[mode]"
     %ul.modes.clearfix
       - (1..5).each do |index|
-        %li.mode{data: "#{index-3}" }
+        %li.mode{data: "#{index}" }
           = image_tag("#{index}.png")
     = f.label :happen_time
     %input{name: "event[happen_time]", type: "date"}
