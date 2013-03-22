@@ -36,10 +36,16 @@ class AgentsController < ApplicationController
     agents.each do |agent|
       events = Event.find_all_by_agent_id(agent.id)
       mood_sum = 0
+      events_num = 0
       events.each do |event|
         mood_sum += event.mode
+        events_num += 1
       end
-      agents_map[agent.name] = mood_sum
+      if events_num > 0
+        agents_map[agent.name] = mood_sum.div(events_num)
+      else
+        agents_map[agent.name] = 3
+      end
     end
     agents_map
   end
