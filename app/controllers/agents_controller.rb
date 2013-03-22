@@ -20,8 +20,12 @@ class AgentsController < ApplicationController
 
   def add
     @agent = Agent.find_by_name(params[:name])
-    @agent.update_attribute(:account_manager_id, current_account_manager.id)
-    redirect_to "/agents"
+    if @agent.nil?
+      redirect_to '/agents/new', alert: 'Agent Not Found.'
+    else
+      @agent.update_attribute(:account_manager_id, current_account_manager.id)
+      redirect_to "/agents"
+    end
   end
 
   def index

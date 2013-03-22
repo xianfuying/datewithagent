@@ -2,6 +2,8 @@
   = render :partial => "layouts/add_agent_header"
 
 .form
+  %p#alert= alert
+
   %form{:action => "/agents/add"}
     %fieldset
       %input#agent{name: "name", type: "text", placeholder: "input agent name"}
