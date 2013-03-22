@@ -3,10 +3,11 @@
 
 %ul.events
   - @agent.events.each do |event|
-    %li.event{data: "#{agent_event_path(@agent, event)}" }
-      .happen-time
-        = pretty_date_format(event.happen_time)
-      .event-type
-        =link_to event.event_type, agent_event_path(@agent, event)
+    %li.event.clearfix{data: "#{agent_event_path(@agent, event)}" }
+      .details
+        .event-type
+          =link_to event.event_type, agent_event_path(@agent, event)
+        .happen-time
+          = pretty_date_format(event.happen_time)
       .mode
         = image_tag("#{event.mode}.png")
