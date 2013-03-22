@@ -39,20 +39,46 @@
 }
 
 .event-detail {
-  div {
-    height: 50px;
-    text-overflow: none;
-    word-wrap: break-word ;
-    display: inline-block;
+  text-overflow: none;
+  word-wrap: break-word;
+  line-height: 30px;
+  margin: 30px 20px 0 20px;
+  .type {
+    .title {
+      float: left;
+      .event-type {
+        font-size: 20px;
+        font-weight: bolder;
+      }
+      .happen_time {
+        font-size: 12px;
+      }
+    }
+    .mood {
+      float: right;
+      margin-right: 10px;
+    }
   }
-  margin: 0px 20px 0 20px;
-  .event-type {
-    font-size: 20px;
-    font-weight: bolder;
-    margin-top: 15px;
+  .description {
+    margin-top: 20px;
+    background-color: white;
+    padding: 10px 20px 10px 20px;
+    font-size: 16px;
+    border-radius: 3px;
   }
-  .mood {
-    float: right;
+}
+
+.action {
+  margin: 40px auto 10px auto;
+  height: 50px;
+  width: 250px;
+  background-color: #55aa77;
+  border: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  input {
+    font-size: 18px;
+    font-color: white;
   }
 }
 

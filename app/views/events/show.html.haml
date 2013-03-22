@@ -2,14 +2,17 @@
   = render :partial => "layouts/event_detail_header"
 
 .event-detail
-  %p#notice= notice
-  .event-type
-    = @event.event_type
-  .mood
-    = image_tag("#{@event.mode}.png")
-  %p
-    = @event.happen_time
-  %p
+  #notice= notice
+  .type.clearfix
+    .title
+      .event-type
+        = @event.event_type
+      .happen_time
+        = @event.happen_time
+    .mood
+      = image_tag("#{@event.mode}.png")
+  .description
     = @event.description
-  .delete
-    = link_to "Delete", agent_event_path(@agent, @event), :method => :delete, data: {confirm: 'Are you sure?'}
+
+.action
+  = button_to "Delete", agent_event_path(@agent, @event), :method => :delete, data: {confirm: 'Are you sure?'}
