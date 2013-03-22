@@ -55,3 +55,19 @@
     float: right;
   }
 }
+
+.modes {
+  .mode {
+    float: left;
+    img {
+      width: 45px;
+      height: 45px;
+    }
+    &.selected {
+      img {
+        width: 55px;
+        height: 55px;
+      }
+    }
+  }
+}

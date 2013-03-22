@@ -5,3 +5,8 @@ $ ->
   $(".event").click (event) ->
     link_class = "." + this.classList[0] + " .event-type a"
     window.location.replace($(link_class).attr('href'))
+
+  $(".mode").click (event) ->
+    $(".mode").removeClass("selected")
+    $(this).addClass("selected")
+    $("#mode input").val($(this).data())
