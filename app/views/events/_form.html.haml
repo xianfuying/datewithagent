@@ -17,7 +17,7 @@
         %li.mode{data: "#{index}" }
           = image_tag("#{index}.png")
     = f.label :happen_time
-    %input{name: "event[happen_time]", type: "date"}
+    %input{name: "event[happen_time]", type: "date", value: @event.happen_time}
     = hidden_field_tag "event[agent_id]", @agent.id
   = f.submit
 

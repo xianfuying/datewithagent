@@ -16,7 +16,7 @@ namespace :db do
     agent = Agent.create!(name: "Patrik Mihailescu")
     Event.create!(description: "Date With Agents", happen_time: Time.now, mode: rand(1..5), event_type: "Meeting", agent_id: agent.id)
     
-    agent = Agent.create!(name: "Stimmel, Christopher")
+    agent = Agent.create!(name: "Stimmel Christopher")
     Event.create!(description: "Date With Agents", happen_time: Time.now, mode: rand(1..5), event_type: "Meeting", agent_id: agent.id)
     
     agent = Agent.create!(name: "Jia Feng")
