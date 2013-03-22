@@ -4,5 +4,5 @@
 
 $ ->
   $(".agent").click (event) ->
-    link_class = "." + this.classList[0] + " .description a"
-    window.location.replace($(link_class).attr('href'))
+    link = $(this).attr("data")
+    window.location.replace(link)

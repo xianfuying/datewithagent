@@ -4,7 +4,7 @@
 .agents-list
   %ul.agents
     - @agents.each do |agent|
-      %li.agent.clearfix
+      %li.agent.clearfix{data: "#{agent_events_path(agent)}" }
         .agent-photo
           = link_to image_tag("agents/#{agent.name}.png"), agent_events_path(agent)
         .description

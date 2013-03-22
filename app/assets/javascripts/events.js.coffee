@@ -3,8 +3,8 @@
 # You can use CoffeeScript in this file: http://jashkenas.github.com/coffee-script/
 $ ->
   $(".event").click (event) ->
-    link_class = "." + this.classList[0] + " .event-type a"
-    window.location.replace($(link_class).attr('href'))
+    link = $(this).attr("data")
+    window.location.replace(link)
 
   $(".mode").click (event) ->
     $(".mode").removeClass("selected")

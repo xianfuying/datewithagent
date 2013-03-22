@@ -3,7 +3,7 @@
 
 %ul.events
   - @agent.events.each do |event|
-    %li.event
+    %li.event{data: "#{agent_event_path(@agent, event)}" }
       .happen-time
         = event.happen_time
       .event-type
