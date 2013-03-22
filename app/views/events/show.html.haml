@@ -1,21 +1,16 @@
 =content_for :header do
-  = render :partial => "layouts/header"
+  = render :partial => "layouts/event_detail_header"
 
-%p#notice= notice
-
-%p
-  %b Type:
-  = @event.event_type
-%p
-  %b Description:
-  = @event.description
-%p
-  %b Mode:
-  = @event.mode
-%p
-  %b Happen time:
-  = @event.happen_time
-
-= link_to 'Edit', edit_agent_event_path(@agent, @event)
-\|
-= link_to 'Back', agent_events_path
+.event-detail
+  %p#notice= notice
+  %p.event-type
+    = @event.event_type
+  .time
+    %p
+      = @event.happen_time
+  .mood
+    = image_tag("#{@event.mode}.png")
+  %p
+    = @event.description
+  .delete
+    = link_to "Delete", agent_event_path(@agent, @event), :method => :delete, data: {confirm: 'Are you sure?'}

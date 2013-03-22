@@ -37,3 +37,16 @@
     }
   }
 }
+
+.event-detail {
+  margin: 0 20px 0 20px;
+  .event-type {
+    font-size: 25px;
+  }
+  .time {
+    display: inline-block;
+  }
+  .mood {
+    display: inline-block;
+  }
+}

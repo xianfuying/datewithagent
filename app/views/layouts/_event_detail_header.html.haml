@@ -1,0 +1,8 @@
+.header.clearfix
+  .title
+    Event Detail
+  .nav.right
+    = link_to "", edit_agent_event_path(@agent, @event), class: "icon-edit"
+  .nav.left
+    = link_to "", agent_events_path, class: "icon-arrow-left"
+
