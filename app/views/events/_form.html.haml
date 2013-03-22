@@ -12,7 +12,7 @@
     = f.input :description, as: 'text', rows: 2
     = f.label :mode
     - mode = @event.mode
-    #mode= hidden_field_tag "event[mode]"
+    #mode= hidden_field_tag "event[mode]", @event.mode
     %ul.modes.clearfix
       - (1..5).each do |index|
         - if index == mode
