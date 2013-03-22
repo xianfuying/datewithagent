@@ -29,7 +29,7 @@ class EventsController < ApplicationController
   # GET /events/new.json
   def new
     @agent = Agent.find(params[:agent_id])
-    @event = @agent.events.new
+    @event = @agent.events.new(:happen_time => Date.today, :mode => 3)
 
     respond_to do |format|
       format.html # new.html.erb

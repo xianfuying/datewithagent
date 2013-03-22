@@ -9,7 +9,7 @@
   %fieldset
     = f.label :event_type
     = f.enum_select :event_type
-    = f.input :description, as: 'text', rows: 2
+    = f.input :description, as: 'text', rows: 2, placeholder: "record more detail..."
     = f.label :mode
     - mode = @event.mode
     #mode= hidden_field_tag "event[mode]", @event.mode
