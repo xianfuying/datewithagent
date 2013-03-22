@@ -5,7 +5,7 @@
   - @agent.events.each do |event|
     %li.event{data: "#{agent_event_path(@agent, event)}" }
       .happen-time
-        = event.happen_time
+        = pretty_date_format(event.happen_time)
       .event-type
         =link_to event.event_type, agent_event_path(@agent, event)
       .mode
