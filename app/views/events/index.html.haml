@@ -6,5 +6,7 @@
     %li.event
       .happen-time
         = event.happen_time
+      .event-type
+        =link_to event.event_type, agent_event_path(@agent, event)
       .mode
         = image_tag("#{event.mode}.png")
