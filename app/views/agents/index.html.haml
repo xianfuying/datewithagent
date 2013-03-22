@@ -8,6 +8,9 @@
         .agent-photo
           = link_to image_tag("agents/#{agent.name}.png"), agent_events_path(agent)
         .description
-          = link_to agent.name, agent_events_path(agent)
+          %p.agent-name
+            = link_to agent.name, agent_events_path(agent)
+          %p.latest_event
+            = link_to agent.events.first.event_type, agent_events_path(agent)
         .mood
           = image_tag("#{@agents_map[agent.name]}.png")

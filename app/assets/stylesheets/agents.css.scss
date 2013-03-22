@@ -59,6 +59,12 @@ div.autocomplete-suggestion {
         border-radius: 5px;
       }
     }
+    .description {
+      text-overflow: ellipsis;
+      .agent-name {
+        font-weight: bold;
+      }
+    }
     .mood {
       float: right;
       height: 50px;
