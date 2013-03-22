@@ -63,9 +63,10 @@
     font-size: 22px;
   }
   input {
-    height: 50px;
+    height: 40px;
     width: 250px;
     font-size: 18px;
+    padding-left: 10px;
   }
   label {
     font-size: 18px;
@@ -76,9 +77,11 @@
   }
   textarea {
     height: 60px;
+    padding: 10px 10px 10px 10px;
   }
   select {
-    height: 50px;
+    padding-left: 10px;
+    height: 40px;
     background-color: white;
   }
   .remember-me {
