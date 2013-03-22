@@ -9,6 +9,7 @@ gem 'mysql2'
 gem 'haml-rails'
 
 gem 'mysql2psql'
+gem 'activerecord-postgresql-adapter'
 gem 'pg'
 
 # Gems used only for assets and not required
