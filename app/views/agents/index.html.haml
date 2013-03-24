@@ -1,6 +1,13 @@
 =content_for :header do
   = render :partial => "layouts/agent_list_header"
 
+.account-center-menu
+  %ul.account-center
+    %li.first{data: "#{agents_path}"}
+      = link_to "Agents", agents_path
+    %li.last{data: "/"}
+      = link_to "Sign Out", "/"
+
 .agents-list
   %ul.agents
     - @agents.each do |agent|

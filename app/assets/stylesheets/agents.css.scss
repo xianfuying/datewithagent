@@ -87,3 +87,39 @@ ul {
   padding-left: 20px;
 }
 
+.account-center-menu {
+  position: absolute;
+  overflow: hidden;
+}
+
+ul.account-center {
+  position: relative;
+  top: -50px;
+  width: 100px;
+  height: 48px;
+  margin-left: 10px;
+  border: 1px solid #5eaa8a;
+  background: #5eaa8a;
+  text-align: left;
+  line-height: 25px;
+  a {
+    text-decoration: none;
+    &:hover {
+      background: none;
+      color: #333;
+    }
+    &:visited {
+      color: #333;
+    }
+  }
+  li:hover {
+    background: #9faa5b;
+    cursor: pointer;
+  }
+  li {
+    padding-left: 10px;
+  }
+  li.last {
+    border-top: 1px dotted gray;
+  }
+}

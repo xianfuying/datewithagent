@@ -6,3 +6,20 @@ $ ->
   $(".agent").click (event) ->
     link = $(this).attr("data")
     window.location.replace(link)
+  $(".account-center li").click (event) ->
+    link = $(this).attr("data")
+    window.location.replace(link)
+
+  $(".nav.left").click (event) ->
+    header = $(".nav.left a")
+    table = $("ul.account-center")
+    if (table.hasClass("is-hide"))
+      table.animate({top: -50}, "slow")
+      table.removeClass("is-hide")
+      header.removeClass("icon-double-angle-up")
+      header.addClass("icon-double-angle-down")
+    else
+      table.animate({top: 0}, "slow")
+      table.addClass("is-hide")
+      header.removeClass("icon-double-angle-down")
+      header.addClass("icon-double-angle-up")
