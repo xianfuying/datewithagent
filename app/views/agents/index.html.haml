@@ -5,8 +5,8 @@
   %ul.account-center
     %li.first{data: "#{agents_path}"}
       = link_to "Agents", agents_path
-    %li.last{data: "/"}
-      = link_to "Sign Out", "/"
+    %li.last{data: "#{destroy_account_manager_session_path}"}
+      = link_to "Sign Out", destroy_account_manager_session_path, :method => :delete
 
 .agents-list
   %ul.agents

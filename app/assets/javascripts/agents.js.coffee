@@ -7,8 +7,7 @@ $ ->
     link = $(this).attr("data")
     window.location.replace(link)
   $(".account-center li").click (event) ->
-    link = $(this).attr("data")
-    window.location.replace(link)
+    $("li.last a")[0].click()
 
   $(".nav.left").click (event) ->
     header = $(".nav.left a")
