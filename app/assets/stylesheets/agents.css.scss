@@ -77,6 +77,32 @@ div.autocomplete-suggestion {
   }
 }
 
+.warning-msg {
+  text-align: center;
+  margin: 60px 0 50px 0;
+}
+
+.warning-msg p.icon-warning-sign {
+  font-size: 18px;
+}
+
+.new-event {
+  width: 250px;
+  height: 50px;
+  background-color: #55aa77;
+  border: none;
+  border-radius: 3px;
+  -webkit-appearance: none;
+  margin: 0 auto;
+  text-align: center;
+}
+
+.new-event .new-event-link {
+  color: white;
+  line-height: 45px;
+  text-decoration: none;
+}
+
 .mood img {
   width: 50px;
   height: 50px;
