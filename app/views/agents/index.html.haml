@@ -8,17 +8,24 @@
     %li.last{data: "#{destroy_account_manager_session_path}"}
       = link_to "Sign Out", destroy_account_manager_session_path, :method => :delete
 
-.agents-list
-  %ul.agents
-    - @agents.each do |agent|
-      %li.agent.clearfix{data: "#{agent_events_path(agent)}" }
-        .agent-photo
-          = link_to image_tag("agents/#{agent.name}.png"), agent_events_path(agent)
-        .description
-          %p.agent-name
-            = link_to agent.name, agent_events_path(agent)
-          - if agent.events.size > 0
-            %p.latest_event
-              = link_to agent.events.first.event_type, agent_events_path(agent)
-        .mood
-          = image_tag("#{@agents_map[agent.name]}.png")
+- if @agents.size > 0
+  .agents-list
+    %ul.agents
+      - @agents.each do |agent|
+        %li.agent.clearfix{data: "#{agent_events_path(agent)}" }
+          .agent-photo
+            = link_to image_tag("agents/#{agent.name}.png"), agent_events_path(agent)
+          .description
+            %p.agent-name
+              = link_to agent.name, agent_events_path(agent)
+            - if agent.events.size > 0
+              %p.latest_event
+                = link_to agent.events.first.event_type, agent_events_path(agent)
+          .mood
+            = image_tag("#{@agents_map[agent.name]}.png")
+- else
+  .no-agent.warning-msg
+    %p.icon-warning-sign
+      Agent not found
+  .action.new-agent
+    = button_to "New Agent", agents_new_path(@agent)

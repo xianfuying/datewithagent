@@ -7,6 +7,7 @@ Datewithagent::Application.routes.draw do
   match '/agents/new' => 'agents#new'
   match '/agents/add' => 'agents#add'
   match '/agents/find' => 'agents#find'
+  match '/agents.:id' => 'agents#destroy'
 
   devise_for :account_managers
 

@@ -33,6 +33,18 @@ class AgentsController < ApplicationController
     @agents_map = generate_agents_mood(@agents)
   end
 
+  # DELETE /agents/1
+  # DELETE /agents/1.json
+  def destroy
+    @agent = Agent.find(params[:id])
+    @agent.destroy
+
+    respond_to do |format|
+      format.html { redirect_to agents_path }
+      format.json { head :no_content }
+    end
+  end
+
   private
 
   def generate_agents_mood agents

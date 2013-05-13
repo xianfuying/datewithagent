@@ -13,8 +13,11 @@
         .mode
           = image_tag("#{event.mode}.png")
 - else
-  .warning-msg
+  .no-event.warning-msg
     %p.icon-warning-sign
       Event not found
-  .new-event
-    = link_to "New Event", new_agent_event_path(@agent), :class => "new-event-link"
+  .action.new-event
+    = button_to "New Event", new_agent_event_path(@agent)
+
+.action.delete
+  = button_to "Delete Agent", agents_path(@agent), :method => :delete, data: {confirm: 'Are you sure to delete agent?'}

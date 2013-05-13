@@ -14,5 +14,5 @@
   .description
     = @event.description
 
-.action
-  = button_to "Delete", agent_event_path(@agent, @event), :method => :delete, data: {confirm: 'Are you sure?'}
+.action.delete
+  = button_to "Delete Event", agent_event_path(@agent, @event), :method => :delete, data: {confirm: 'Are you sure to delete event?'}
