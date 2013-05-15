@@ -37,7 +37,7 @@ class AgentsController < ApplicationController
   # DELETE /agents/1.json
   def destroy
     @agent = Agent.find(params[:id])
-    @agent.destroy
+    @agent.update_attribute(:account_manager_id, nil)
 
     respond_to do |format|
       format.html { redirect_to agents_path }
