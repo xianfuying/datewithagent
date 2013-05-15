@@ -17,7 +17,7 @@
     %p.icon-warning-sign
       Event not found
   .action.new-event
-    = button_to "New Event", new_agent_event_path(@agent)
+    = button_to "New Event", new_agent_event_path(@agent), :method => :get
 
 .action.delete
   = button_to "Delete Agent", agents_path(@agent), :method => :delete, data: {confirm: 'Are you sure to delete agent?'}
