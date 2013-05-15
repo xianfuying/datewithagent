@@ -37,6 +37,7 @@ class AgentsController < ApplicationController
   # DELETE /agents/1.json
   def destroy
     @agent = Agent.find(params[:id])
+    @agent.events.destroy_all
     @agent.update_attribute(:account_manager_id, nil)
 
     respond_to do |format|
